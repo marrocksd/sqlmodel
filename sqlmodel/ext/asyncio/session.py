@@ -103,8 +103,7 @@ class AsyncSession(_AsyncSession):
         options: Optional[Sequence[Any]] = None,
         populate_existing: bool = False,
         with_for_update: Optional[Union[Literal[True], Mapping[str, Any]]] = None,
-        identity_token: Optional[Any] = None,
-        execution_options: Optional[Mapping[Any, Any]] = util.EMPTY_DICT,
+        identity_token: Optional[Any] = None
     ) -> Optional[_TSelectParam]:
         return await super().get(
             entity=entity,
@@ -112,6 +111,5 @@ class AsyncSession(_AsyncSession):
             options=options,
             populate_existing=populate_existing,
             with_for_update=with_for_update,
-            identity_token=identity_token,
-            execution_options=execution_options,
+            identity_token=identity_token
         )
