@@ -138,7 +138,7 @@ def create_engine(
     if not isinstance(query_cache_size, _DefaultPlaceholder):
         current_kwargs["query_cache_size"] = query_cache_size
     current_kwargs.update(kwargs)
-    return _create_engine(url, **current_kwargs)  # type: ignore
+    return _create_engine(url, **current_kwargs)
 
 
 def create_async_engine(
